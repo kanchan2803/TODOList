@@ -13,9 +13,10 @@ console.log(itemsArray)
 
 //creating a task
 document.querySelector("#enter").addEventListener("click",()=>{
-    const item = document.querySelector("#inputbox")
-    createItem(item)
-})
+    const item = document.querySelector("#inputbox");
+    createItem(item);
+    item.value="";
+});
 
 function createItem(item){
     const itemObject = {
@@ -25,11 +26,7 @@ function createItem(item){
 
     itemsArray.push(itemObject);
     localStorage.setItem("items", JSON.stringify(itemsArray));
-    location.reload();
-
-    // itemsArray.push(item.value)
-    // localStorage.setItem("items", JSON.stringify(itemsArray))
-    // location.reload()
+    displayItems();
 }
 
 //displaying it on screen
@@ -74,7 +71,8 @@ function activateDeleteListeners(){
 function deleteItem(i){
     itemsArray.splice(i,1)
     localStorage.setItem('items', JSON.stringify(itemsArray))
-    location.reload()
+    // location.reload()
+    displayItems();
   }
 
 
@@ -102,7 +100,7 @@ function activateEditListeners(){
         }
 
         function updateItem(text, i){
-            itemsArray[i] = text
+            itemsArray[i].text = text;
             localStorage.setItem('items', JSON.stringify(itemsArray))
             location.reload()
           }
