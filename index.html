@@ -17,59 +17,59 @@
             <div class="text">
             <span class="text-1">The future depends on  <br> what you do Today. </span>
             <span class="text-2">Let's plan your Day</span>
-            </div>
         </div>
     </div>
+  </div>
     <div class="forms">
-        <div class="form-content">
+      <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-          <form action="#">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input type="email" name="emai" class="emai" placeholder="Enter your email" required autocomplete="on">
+            <form id="login-form">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" name="emai" class="emai" placeholder="Enter your email" required autocomplete="on">
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" name="passwor" class="passwor" placeholder="Enter your password" required autocomplete="off">
+                </div>
+                <div class="button input-box">
+                  <button type="submit" id="savebtn">Submit</button>
+                </div>
+                <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
               </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input type="password" name="passwor" class="passwor" placeholder="Enter your password" required autocomplete="off">
-              </div>
-              <div class="button input-box">
-                <button type="submit" id="savebtn" onclick="checkData()">Submit</button>
-              </div>
-              <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
-            </div>
-        </form>
-      </div>
+            </form>
+          </div>
         <div class="signup-form">
           <div class="title">Signup</div>
-        <form onsubmit="jsFunction();return false">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <label for="name"></label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required autocomplete="on">
+          <form id="signup-form">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-user"></i>
+                  <label for="name"></label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name" required autocomplete="on">
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <label for="email"></label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="on">
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <label for="password"></label>
+                  <input type="password" id="password" name="password" placeholder="Enter your password" required autocomplete="off">
+                </div>
+                <div class="button input-box">
+                  <button type="submit" id="saveBtn">Submit</button>
+                </div>
+                <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
               </div>
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <label for="email"></label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="on">
-              </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <label for="password"></label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required autocomplete="off">
-              </div>
-              <div class="button input-box">
-                <button type="submit" onclick="saveData()" id="saveBtn">Submit</button>
-              </div>
-              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
-            </div>
-      </form>
+          </form>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-  </div>
+    
   <script src="login.js"></script>
 </body>
 </html>

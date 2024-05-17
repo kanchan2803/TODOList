@@ -146,6 +146,16 @@ function activateEditListeners(){
             location.reload()
         }
 
+//logout button function
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('logout-button').addEventListener('click', function() {
+        localStorage.removeItem('name');
+        localStorage.removeItem('email');
+        window.location.replace('index.html');
+    });
+});
+
+
 
 window.onload = function() {
     console.log(localStorage.getItem("name"))
